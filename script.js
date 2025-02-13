@@ -1,6 +1,5 @@
 const inputTask=document.querySelector('.formm');
 const AddButton= document.querySelector('.addNew');
-const RemoveButton = document.querySelector('.removeTask');
 const listHead = document.querySelector('.tasks')
 const input= document.querySelector('.inpp');
 
@@ -15,14 +14,19 @@ const AddTask = function(){
 
     const newTask = document.createElement('li');
     newTask.innerText=input.value.trim();
-    listHead.appendChild(newTask)
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML="❌"
+    deleteButton.classList.add("deleteBtn")
+    newTask.appendChild(deleteButton);
+    listHead.appendChild(newTask);
+  deleteButton.addEventListener("click",function(){
+    listHead.removeChild(newTask)
+  })
+
     input.value="";
 
+
 }
-const RemoveList= function(){
-    if(document.querySelector('.tasks').lastChild){
-        listHead.removeChild(listHead.lastChild);
-    }
-}
+
 AddButton.addEventListener('click',AddTask);
 RemoveButton.addEventListener('click',RemoveList)
