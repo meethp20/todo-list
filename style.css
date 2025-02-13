@@ -1,69 +1,98 @@
-/* Body with black & pink gradient */
+/* ---- Import Cool Font ---- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* ---- Full Page Dark & Pink Background ---- */
 body {
-    background: linear-gradient(135deg, black, #ff1493);
+    background: linear-gradient(135deg, #000000, #ff1493);
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Centering the to-do list */
+/* ---- Main To-Do List Box ---- */
 .containe {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.5);
-    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 6px 20px rgba(255, 20, 147, 0.7);
+    width: 450px;
     text-align: center;
 }
 
-/* Input Box */
+/* ---- Input Field ---- */
 .inpp {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 92%;
+    padding: 15px;
+    font-size: 18px;
+    border: 3px solid #ff1493;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    outline: none;
+    transition: 0.3s;
 }
 
-/* Buttons */
+/* Input focus effect */
+.inpp:focus {
+    border-color: #ff69b4;
+    box-shadow: 0px 0px 12px #ff69b4;
+}
+
+/* ---- Add Task Button ---- */
 .addNew {
     background: #ff1493;
     border: none;
     color: white;
-    padding: 8px 15px;
+    padding: 12px 25px;
+    margin: 12px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 18px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .addNew:hover {
     background: #ff69b4;
+    box-shadow: 0px 0px 15px #ff69b4;
 }
 
-/* Task List */
+/* ---- Task List ---- */
 .tasks {
     list-style: none;
     padding: 0;
+    margin-top: 15px;
 }
 
+/* ---- Task Items ---- */
 .taskItem {
-    background: #222;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 8px 0;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-/* Delete Button */
+/* ---- Delete Button (Neon Glow Effect) ---- */
 .deleteBtn {
     background: transparent;
     border: none;
+    font-size: 22px;
     cursor: pointer;
-    font-size: 18px;
     color: red;
+    transition: 0.3s;
+}
+
+.deleteBtn:hover {
+    color: #ff0000;
+    text-shadow: 0px 0px 12px red;
 }
