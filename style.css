@@ -1,82 +1,69 @@
-/* Dark Theme Styles */
+/* Body with black & pink gradient */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text */
+    background: linear-gradient(135deg, black, #ff1493);
+    color: white;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-.container {
-    background: #1e1e1e; /* Dark grey container */
+/* Centering the to-do list */
+.containe {
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.5);
+    width: 300px;
     text-align: center;
-    width: 350px;
 }
 
-input.inpp {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 15px;
+/* Input Box */
+.inpp {
+    width: 100%;
+    padding: 8px;
     border: none;
     border-radius: 5px;
-    background: #2a2a2a;
-    color: #e0e0e0;
-    outline: none;
+    margin-bottom: 10px;
 }
 
-button {
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+/* Buttons */
+.addNew {
+    background: #ff1493;
+    border: none;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 8px 15px;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 5px;
     font-weight: bold;
 }
 
-button:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+.addNew:hover {
+    background: #ff69b4;
 }
 
-ul.tasks {
+/* Task List */
+.tasks {
     list-style: none;
     padding: 0;
 }
 
-ul.tasks li {
-    background: #252525;
-    padding: 10px;
+.taskItem {
+    background: #222;
     margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
-    transition: 0.3s;
 }
 
-ul.tasks li:hover {
-    background: #333;
-}
-
+/* Delete Button */
 .deleteBtn {
-    background: #ff4b2b;
+    background: transparent;
     border: none;
-    color: white;
-    padding: 5px 8px;
-    border-radius: 50%;
     cursor: pointer;
-    font-size: 14px;
-}
-
-.deleteBtn:hover {
-    background: #d63c1f;
+    font-size: 18px;
+    color: red;
 }

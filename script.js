@@ -28,5 +28,4 @@ const AddTask = function(){
 
 }
 
-AddButton.addEventListener('click',AddTask);
-RemoveButton.addEventListener('click',RemoveList)
+AddButton.addEventListener('click', AddTask);
